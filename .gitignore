@@ -1,0 +1,17 @@
+# Various IDEs and Editors
+.vscode/
+.idea/
+.meta
+**/*~
+
+# Mac OSX temporary files
+.DS_Store
+**/.DS_Store
+
+# dfx temporary files
+.dfx/
+
+# build folders
+node_modules/
+dist/
+src/declarations/

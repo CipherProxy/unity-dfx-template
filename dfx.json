@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "fullstacking": {
+      "main": "src/motoko_canister/main.mo",
+      "type": "motoko"
+    },
+    "unity": {
+      "type": "assets",
+      "source": ["dist/unity/"],
+      "dependencies": ["fullstacking"],
+      "frontend": {
+        "entrypoint": "dist/unity/index.html"
+      }
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "0.0.0.0:8000", 
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
