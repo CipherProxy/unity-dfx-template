@@ -1,13 +1,13 @@
 {
   "canisters": {
-    "fullstacking": {
+    "motoko_canister": {
       "main": "src/motoko_canister/main.mo",
       "type": "motoko"
     },
     "unity": {
       "type": "assets",
       "source": ["dist/unity/"],
-      "dependencies": ["fullstacking"],
+      "dependencies": ["motoko_canister"],
       "frontend": {
         "entrypoint": "dist/unity/index.html"
       }

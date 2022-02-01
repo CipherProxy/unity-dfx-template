@@ -99,10 +99,10 @@ module.exports = {
           from: path.join(__dirname, "src", frontendDirectory, "build", "Build"),
           to: path.join(__dirname, "dist", frontendDirectory, "Build"),
         },
-        {
+        /*{
           from: path.join(__dirname, "src", frontendDirectory, "build", "TemplateData"),
           to: path.join(__dirname, "dist", frontendDirectory, "TemplateData"),
-        },
+        },*/
       ],
     }),
     new webpack.EnvironmentPlugin({

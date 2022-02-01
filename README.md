@@ -4,17 +4,23 @@ This is a template for a unity canister on the Internet Computer Blockchain.
 
 The example project includes a motoko canister with a hashtable, and a jslib/c# library for using the candid interface.
 
-The candid interface is included in the `src/unity/project` folder. Import it as a plugin in unity and add the demoscript to a gameobject.
-
 ## Building the Unity project
 
-Unity projects must be built with compression: off in the webgl build settings. Output the build to `src/unity/build`. 
+The candid interface is included in the `src/unity/project` folder. Import it as a plugin in unity and add the demoscript to a gameobject.
+
+Unity projects must be built with compression: off in the webgl player settings
+
+![webgl player settings](/readme_images/unity_build_settings.png "unity web player settings")
+
+If you have a TemplateData folder in your unity webgl build, uncomment the copy function in `webpack.config.js`
+
+Output the build to `src/unity/build`. 
 
 ## Running the project locally
 
 ```bash
 # Starts the replica, running in the background
-dfx start --background
+dfx start --background (--clean: start clean local ic environment)
 
 # Deploys your canisters to the replica and generates your candid interface
 dfx deploy

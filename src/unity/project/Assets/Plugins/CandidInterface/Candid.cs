@@ -21,7 +21,7 @@ public static class Candid
 
 
     // This is the callback, whose pointer we'll send to javascript and is called by emscripten's Runtime.dynCall.
-    public delegate void RequestCallback(int requestID, string url, string error);
+    public delegate void RequestCallback(int requestID, string response, string error);
 
     /// <summary>
     /// Everytime a request is issued, give it the current id and increment this for next request.
@@ -38,9 +38,9 @@ public static class Candid
     /// Called from the javascript side, this is the function whose pointer we passed to <see cref="lookup"/>
     /// This must match the return type and arguments of <see cref="RequestCallback"/>
     /// </summary>
-    /// <param name="requestID"></param>
-    /// <param name="url"></param>
-    /// <param name="error"></param>
+    /// <param key="requestID"></param>
+    /// <param key="response"></param>
+    /// <param key="error"></param>
     [MonoPInvokeCallback(typeof(Action))]
     private static void GlobalCallback(int requestID, string response, string error)
     {
@@ -65,10 +65,10 @@ public static class Candid
 
 
     /// <summary>
-    /// Gets a storage url using the javascript firebase sdk.
+    /// Gets a storage response using the javascript firebase sdk.
     /// </summary>
-    /// <param name="name"></param>
-    /// <param name="callback">callback when the link is received or an error.</param>
+    /// <param key="key"></param>
+    /// <param key="callback">callback when the link is received or an error.</param>
     public static void Lookup(string key, Action<string, string> callback)
     {
         int requestID = requestIDIncrementer;

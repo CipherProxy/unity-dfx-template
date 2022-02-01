@@ -1,5 +1,6 @@
 using UnityEngine;
 using static Candid;
+
 /// <summary>
 /// Class with a JS Plugin functions for WebGL.
 /// </summary>
