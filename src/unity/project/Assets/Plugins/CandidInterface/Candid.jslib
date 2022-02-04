@@ -40,7 +40,12 @@ var candid_interface = {
 			.lookup(UTF8ToString(keyPtr))
 			.then(function (responseObj) {
 				// Send the link to the communicator to send it to a C# callback.
-				contextObject.SendResult(requestID, JSON.stringify(responseObj), null, callback);
+				contextObject.SendResult(
+					requestID,
+					JSON.stringify(responseObj),
+					null,
+					callback
+				);
 			})
 			.catch(function (error) {
 				// Send the error to the communicator to send to a C# callback.
@@ -62,7 +67,12 @@ var candid_interface = {
 			.insert(UTF8ToString(keyPtr), entry)
 			.then(function (responseObj) {
 				// Send the link to the communicator to send it to a C# callback.
-				contextObject.SendResult(requestID, JSON.stringify(responseObj), null, callback);
+				contextObject.SendResult(
+					requestID,
+					JSON.stringify(responseObj),
+					null,
+					callback
+				);
 			})
 			.catch(function (error) {
 				// Send the error to the communicator to send to a C# callback.
