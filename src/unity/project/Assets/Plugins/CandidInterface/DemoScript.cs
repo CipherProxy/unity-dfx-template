@@ -1,10 +1,7 @@
 using UnityEngine;
 using static Candid;
 
-/// <summary>
-/// Class with a JS Plugin functions for WebGL.
-/// </summary>
-
+/// Example Script for using the candid interface on a game object.
 public class DemoScript : MonoBehaviour
 {
     private void Start()
