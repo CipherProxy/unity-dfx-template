@@ -19,6 +19,9 @@ Output the build to `src/unity/build`.
 ## Running the project locally
 
 ```bash
+# Installs required dependancies
+npm install
+
 # Starts the replica, running in the background
 dfx start --background (--clean: start clean local ic environment)
 
